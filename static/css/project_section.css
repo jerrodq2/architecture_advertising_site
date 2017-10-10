@@ -1,0 +1,15 @@
+.project_sections{
+  background-color: white;
+}
+
+.project_list{
+  margin-top: 30px;
+  list-style: none;
+}
+
+.first_image{
+  width: 250px;
+  height: 345px;
+  margin: 20px auto;
+  float: right;
+}
