@@ -1,15 +1,43 @@
+.project-container:before{
+  display: table;
+  content: ' ';
+  width: 100%;
+  background-color: white;
+}
+.project-container:after{
+  display: table;
+  content: ' ';
+  clear: both;
+  width: 100%;
+  background-color: white;
+}
+.project-container{
+  background-color: white;
+  font-family: Open Sans,sans-serif;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: block;
+}
 .project_sections{
   background-color: white;
 }
 
 .project_list{
+  width: 60%;
+  margin: auto;
   margin-top: 30px;
   list-style: none;
 }
+.project_list li{
+  padding: 100px 0;
+  display: block;
+  border-bottom: 3px solid lightgrey;
+  margin: 0 auto;
+}
 
-.first_image{
-  width: 250px;
-  height: 345px;
-  margin: 20px auto;
-  float: right;
+.tall_image{
+  width: 80%;
+  /*height: 345px;*/
+  margin: 0 auto;
 }
