@@ -24,6 +24,7 @@
 .logo{
   width: 200px;
   height: 50px;
+  display: inline-block;
 }
 .nav-default{
   float: right;
@@ -49,4 +50,19 @@
   margin: 0 auto;
   padding: 115px 0 200px;
   color: white;
+}
+.title{
+  font-size: 55px;
+  text-align: center;
+  -webkit-transition: all 1s ease; /* Safari */
+  transition: all 1s ease;
+}
+.title:hover{
+  cursor: default;
+  color: red;
+}
+.title-description{
+  font-size: 16px;
+  margin: 20px 0;
+  line-height: 22px;
 }
