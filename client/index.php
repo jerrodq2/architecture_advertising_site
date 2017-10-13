@@ -15,6 +15,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("a").click(function(){
+          $("html, body").stop().animate({scrollTop:$($.attr(this,"href")).offset().top},750);
+          var e=$(this).attr("href");return e.indexOf("#contact")>=0&&$("#name").focus(),!1
+        })
+
+      // END OF JQUERY SECTION
+      });
+    </script>
   </head>
 
 
@@ -22,14 +33,14 @@
   <body>
     <!-- START OF LOGO AND NAVBAR SECTION -->
     <header>
-      <div class="background"></div>
+      <div class="background" id="top"></div>
       <div class="header-container">
         <img class="logo" src="static/images/logo.png" alt="Logo_here">
         <nav class="nav-default">
           <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">contact</a></li>
+            <li><a href="#top" class="active">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">contact</a></li>
           </ul>
         </nav>
       </div>
@@ -41,7 +52,7 @@
       <!-- Start of the HOME section or the top of the page -->
       <div class="title-row">
         <h1 class="title">World Class Architecture Firm</h1>
-        <p class="title-description">Based out of Dallas, TX, Mosbius Designs is an architecture firm with over 10 years of experience designing groundbreaking buildings. From commercial, business, to personal, we pride ourselves on creating state if the art buildings and exceeding expectations. If you are a business or individual in need of architectural services, you can get in touch with our company <a href="#">here</a>.</p>
+        <p class="title-description">Based out of Dallas, TX, Mosbius Designs is an architecture firm with over 10 years of experience designing groundbreaking buildings. From commercial, business, to personal, we pride ourselves on creating state if the art buildings and exceeding expectations. If you are a business or individual in need of architectural services, you can get in touch with our company <a href="#"><b>here</b></a>.</p>
       </div>
       <!-- END of the HOME section or the top of the page -->
 
@@ -53,7 +64,7 @@
 
       <!-- START OF THE PROJECT SECTION/MIDDLE OF THE PAGE -->
       <div class="project-container">
-        <ul class="project_list">
+        <ul class="project_list" id="projects">
 
           <li>
             <img class="tall_image" src="static/images/project_1_with_screen.jpg" alt="">
@@ -123,12 +134,12 @@
       <!-- START OF THE CONTACT/FOOTER SECTION -->
       <div class="contact-section">
         <div id="map"> </div> <!-- Google map here -->
-        <div class="contact-container">
+        <div class="contact-container" id="contact">
 
           <!-- START OF CONTACT INFO-->
           <div class="contact-left-half">
             <img class="profile" src="static/images/profile-min.jpg" alt="Profile Pic Here">
-            <p>+1 (123)456-7890</p>
+            <p class="number"><a href="tel:4326380512">+1 (432) 638-0512</a></p>
             <ul class="contact-list">
               <li>
                 <a href="https://github.com/jerrodq2">
@@ -153,7 +164,7 @@
           <div class="contact-right-half">
             <form class="contact-form" action="process_email.php" method="post">
               <div class="text-fields">
-                <input type="text" name="name" value="" placeholder="Name" required>
+                <input type="text" name="name" value="" placeholder="Name" required id="name">
                 <input type="email" name="email" value="" placeholder="Email">
                 <input type="text" name="phone" value="" placeholder="Phone">
               </div>
