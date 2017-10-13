@@ -5,38 +5,78 @@ if(!isset($_POST['submit'])){
   echo "error; you need to submit the form!";
 }
 
-$name = $_POST['name'];
-$visitor_email = $_POST['$email'];
-$phone = $_POST['$phone'];
-$message = $_POST['$message'];
+$visitor_name = $_POST['name'];
+$visitor_message = $_POST['message'];
 
-if(empty($name) || empty($message))
+//incase the email isn't provided
+if(empty($_POST['email'])){
+  $visitor_email = 'n/a';
+} else {
+  $visitor_email = $_POST['email'];
+}
+
+//incase the phone isn't provided
+if(empty($_POST['phone'])){
+  $visitor_phone = 'n/a';
+} else {
+  $visitor_phone = $_POST['phone'];
+}
+
+
+if(empty($visitor_name) || empty($visitor_message))
 {
   echo "Name and message are mandatory!";
   exit;
 }
 
+//a function created below for security purposes
 if(IsInjected($visitor_email))
 {
     echo "Bad email value!";
     exit;
 }
 
-//validate first
-$email_from = 'tom@amazing-designs.com';
+// ************************************************************************************************
+// **************************** CODE FOR EMAIL BODY BELOW *****************************************
+// ************************************************************************************************
 
-$email_subject = "Someone Is Trying To Contact You";
+$email_body = '<html><body>';
+$email_body .= "<h2> You've recieved a new message from: $visitor_name </h2>";
+$email_body .= '<h4> Here is the message: </h4>';
+$email_body .= "<p> $visitor_message </p>";
+$email_body .= "<h4> Their contact info is below</h4>";
+$email_body .= "<ul> <li> email: $visitor_email </li>";
+$email_body .= "<li> phone: $visitor_phone </li></ul>";
+$email_body .= '</body></html>';
 
-$email_body = "You've recieved a new message from: $name. \n Here is the message: \n $message \n Their contact info is \n email: $email, \n phone: $phone";
+// $email_body = "You've recieved a new message from: $visitor_name. \r\n\n Here is the message: \r\n\n $visitor_message \r\n\n\n Their contact info is \r\n\n email: $visitor_email \r\n phone: $visitor_phone";
+
+// ************************************************************************************************
+// **************************** END OF CODE FOR EMAIL BODY ****************************************
+// ************************************************************************************************
+
 
 // code to send emails is as follows: email(to, subject, message, headers)
 $to = 'jerrodq2@yahoo.com';
-$subject = "From: $email_from \r\n";
-$headers .= "Reply-To: $visitor_email \r\n";
+$subject = "Contact Form Submission: Someone Is Trying To Contact You\r\n";
+$headers = "From: contact-form@ArchitectureAdvertisingWebsite.com \r\n";
+//The below line is necessary if you're sending your email in html format, without it, the email will be read literally, meaning "<h1>H1</h1>" would be shown exactly like that instead of as heder 1 text
+$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+//only provide a Reply-To if they gave us an email
+if($visitor_email != 'n/a'){
+  $headers .= "Reply-To: $visitor_email \r\n";
+}
+
 //send the email
-mail($to, $email_subject, $email_body, $headers);
+if(mail($to, $subject, $email_body, $headers)){
+  echo "Message sent";
+  header('Location: end.html');
+} else {
+  echo "Message not sent, there was an error. Please contact Jerrod at jerrodq2@yahoo.com";
+}
 //redirect to the thank you page (or the equivalent)
-header('Location: client/index.html');
+
 
 
 // Function to validate against any email injection attempts
