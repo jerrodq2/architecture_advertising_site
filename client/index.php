@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="static/css/project_section.css">
     <link rel="stylesheet" href="static/css/contact_section.css">
     <link rel="stylesheet" href="static/css/fontello.css">
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
   </head>
 
 
@@ -39,6 +44,12 @@
         <p class="title-description">Based out of Dallas, TX, Mosbius Designs is an architecture firm with over 10 years of experience designing groundbreaking buildings. From commercial, business, to personal, we pride ourselves on creating state if the art buildings and exceeding expectations. If you are a business or individual in need of architectural services, you can get in touch with our company <a href="#">here</a>.</p>
       </div>
       <!-- END of the HOME section or the top of the page -->
+
+
+
+
+
+
 
       <!-- START OF THE PROJECT SECTION/MIDDLE OF THE PAGE -->
       <div class="project-container">
@@ -140,14 +151,14 @@
 
           <!-- START OF CONTACT FORM -->
           <div class="contact-right-half">
-            <form class="contact-form" action="../email.php" method="post">
+            <form class="contact-form" action="process_email.php" method="post">
               <div class="text-fields">
                 <input type="text" name="name" value="" placeholder="Name" required>
                 <input type="email" name="email" value="" placeholder="Email">
                 <input type="text" name="phone" value="" placeholder="Phone">
               </div>
-              <textarea name="message" placeholder="Message" rows="6"></textarea>
-              <input type="submit" class="button" value="Submit">
+              <textarea name="message" placeholder="Message" rows="6" required></textarea>
+              <input type="submit" class="button" name="submit" value="Submit">
             </form>
           </div>
           <!-- START OF CONTACT FORM -->
