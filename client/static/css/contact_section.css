@@ -15,6 +15,7 @@
 .contact-left-half{
   width: 35%;
   display: inline-block;
+  text-align: center;
 }
 .contact-right-half{
   width: 60%;
@@ -25,6 +26,18 @@
   border-radius: 50%;
   height: 200px;
   width: 200px;
+}
+.number{
+  width: 150px;
+  padding: 10px;
+  margin: 10px auto;
+  background-color: #ff0044;
+  border-radius: 5px;
+}
+.number a{
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
 }
 .contact-list{
   list-style: none;
@@ -41,7 +54,9 @@ input[type=email], input[type=text]{
   width: 23%;
 }
 textarea{
-  width: 90%
+  width: 87%;
+  resize: none;
+  overflow: hidden;
 }
 input[type=email], input[type=text], textarea {
     padding: 12px 24px;
@@ -50,10 +65,12 @@ input[type=email], input[type=text], textarea {
     color: #000;
     font-weight: 700;
     margin-bottom: 10px;
-    background: rgba(0,0,0,.10);
+    background: rgba(0,0,0,.12);
+    border-radius: 5px;
 }
 
 .button{
+  font-size: 14px;
   width: 80px;
   height: 30px;
   color: white;
