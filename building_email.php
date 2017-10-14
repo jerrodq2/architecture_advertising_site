@@ -41,7 +41,7 @@ if(IsInjected($visitor_email))
 // ************************************************************************************************
 
 $email_body = '<html><body>';
-$email_body .= "<h2> You've recieved a new message from: $visitor_name </h2>";
+$email_body .= "<h2> You've recieved a new message from: $visitor_name, they need a building </h2>";
 $email_body .= '<h4> Here is the message: </h4>';
 $email_body .= "<p> $visitor_message </p>";
 $email_body .= "<h4> Their contact info is below</h4>";
@@ -49,7 +49,6 @@ $email_body .= "<ul> <li> email: $visitor_email </li>";
 $email_body .= "<li> phone: $visitor_phone </li></ul>";
 $email_body .= '</body></html>';
 
-// $email_body = "You've recieved a new message from: $visitor_name. \r\n\n Here is the message: \r\n\n $visitor_message \r\n\n\n Their contact info is \r\n\n email: $visitor_email \r\n phone: $visitor_phone";
 
 // ************************************************************************************************
 // **************************** END OF CODE FOR EMAIL BODY ****************************************
@@ -58,8 +57,8 @@ $email_body .= '</body></html>';
 
 // code to send emails is as follows: email(to, subject, message, headers)
 $to = 'jerrodq2@yahoo.com';
-$subject = "Contact Form Submission: Someone Is Trying To Contact You\r\n";
-$headers = "From: contact-form@ArchitectureAdvertisingWebsite.com \r\n";
+$subject = "Building Form Submission: $visitor_name Needs a building\r\n";
+$headers = "From: building-form@ArchitectureAdvertisingWebsite.com \r\n";
 //The below line is necessary if you're sending your email in html format, without it, the email will be read literally, meaning "<h1>H1</h1>" would be shown exactly like that instead of as heder 1 text
 $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 

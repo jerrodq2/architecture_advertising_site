@@ -8,7 +8,6 @@
 .project_list{
   width: 60%;
   margin: auto;
-  margin-top: 30px;
   list-style: none;
   background-color: white;
 }
@@ -38,12 +37,15 @@
   width: 45%;
   display: inline-block;
   text-align: center;
+  vertical-align: top;
+  padding-top: 25%;
 }
 .project_description_wide{
   width: 45%;
   display: inline-block;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: top;
+  padding: 11% 10px 0;
 }
 .description{
   color: grey;
