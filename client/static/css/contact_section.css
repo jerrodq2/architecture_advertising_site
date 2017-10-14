@@ -5,7 +5,8 @@
 }
 .contact-container{
   width: 60%;
-  margin: 50px auto;
+  padding-bottom: 50px;
+  margin: 50px auto 0;
 }
 #map{
   width: 100%;
@@ -49,16 +50,18 @@
 .text-fields{
   width: 100%;
 }
-input[type=email], input[type=text]{
+.contact-form{
+}
+.contact-form input[type=email], .contact-form input[type=text]{
   display: inline-block;
   width: 23%;
 }
-textarea{
+.contact-form textarea{
   width: 87%;
   resize: none;
   overflow: hidden;
 }
-input[type=email], input[type=text], textarea {
+.contact-form input[type=email], .contact-form input[type=text], .contact-form textarea {
     padding: 12px 24px;
     font-size: 15px;
     font-family: open sans;
@@ -77,4 +80,19 @@ input[type=email], input[type=text], textarea {
   background-color: #ff0044;
   border-radius: 8%;
   float: right;
+  margin-right: 2%;
+}
+.copyright:first-of-type {
+  margin: 200px auto 0;
+}
+.copyright:not(:first-of-type) {
+  margin: 10px auto 0;
+}
+.copyright{
+  font-size: 12px;
+  text-align: center;
+  color: grey;
+}
+.copyright a {
+  color: blue;
 }
