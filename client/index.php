@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Mobius Designs - Architecture Firm</title>
     <meta name="description" content="An artichture firm based out of Dallas, TX with years of experience creating stunning buildings and structures.">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/ico" href="static/images/architecture_favicon.ico">
 
     <!-- STYLESHEETS BELOW -->
@@ -28,11 +29,21 @@
           <img class="logo" src="static/images/logo.png" alt="Logo_here">
           <nav class="nav-default">
             <ul>
-              <li><a href="#top" id="home_nav" class="active">Home</a></li>
-              <li><a href="#projects" id="project_nav">Projects</a></li>
-              <li><a href="#contact" id="contact_nav">contact</a></li>
+              <li><a href="#top" class="active home_nav">Home</a></li>
+              <li><a href="#projects" class="project_nav">Projects</a></li>
+              <li><a href="#contact" class="contact_nav">Contact</a></li>
             </ul>
           </nav>
+          <div class="hamburger">
+            <button type="button" name="button"><img class="hamburger-icon" src="static/images/hamburger.png" alt="Hamburger Icon"></button>
+          </div>
+        </div>
+        <div class="hamburger-list">
+          <ul class="">
+            <li><a href="#top"  class="active home_nav">Home</a></li>
+            <li><a href="#projects" class="project_nav">Projects</a></li>
+            <li><a href="#contact" class="contact_nav">Contact</a></li>
+          </ul>
         </div>
       </div>
     </header>
@@ -49,9 +60,11 @@
         <p class="note"><small>*This website is merely an example, Mosbius Designs, all building names and locations are fictional. Any resemblence to real life locations or organizations is merely coincidence </small></p>
 
         <form class="building-form" action="process_building_form.php" method="post">
-          <input type="text" name="name" placeholder="Name" required>
-          <input type="email" name="email" placeholder="Email">
-          <input type="text" name="phone" placeholder="Phone">
+          <div class="building-form-inputs">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email">
+            <input type="text" name="phone" placeholder="Phone">
+          </div>
           <textarea name="message" rows="8" placeholder="General Idea of Building or Message to Architecture Firm" required></textarea>
           <input type="submit" name="" value="Submit">
         </form>

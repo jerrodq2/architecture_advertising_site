@@ -22,14 +22,14 @@
 .header-container{
   width: 100%;
   display: block;
-  height: 65px;
+  height: 75px;
   z-index: 2;
 }
 .navbar{
   width: 60%;
   margin: auto;
   color: white;
-  padding: 10px 0 10px 0;
+  padding: 10px 0 0 0;
 }
 .default{
   position: relative!important;
@@ -63,6 +63,44 @@
   padding: 90px 35px 10px;
   text-decoration: none;
 }
+
+
+.hamburger{
+  display: none;
+  float: right;
+  width: 75px;
+}
+.hamburger button{
+  background-color: grey;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.hamburger-icon{
+  height: 50px;
+  width: 50px;
+}
+.hamburger-list{
+  display: none;
+  list-style: none;
+  width: 100%;
+  background-color: grey;
+}
+.hamburger-list li{
+  text-align: center;
+  width: 29%;
+  display: inline-block;
+  padding: 10px 10px;
+}
+.hamburger-list li:not(:last-child){
+  border-right: 2px solid black;
+}
+.hamburger-list li a{
+  color: white;
+  text-decoration: none;
+}
+
+
+
 .title-row{
   font-family: Open Sans,sans-serif;
   width: 60%;
@@ -133,22 +171,20 @@
   margin-top: 20px;
   width: 100%
 }
-.building-form input[type=text]:first-child{
-  margin: 15px 10px 15px 0;
-}
-.building-form input[type=text]:not(:first-child), .building-form input[type=email]{
-  margin: 15px 10px 15px 10px;
+.building-form-inputs{
+  width: 100%;
 }
 .building-form input[type=text], .building-form input[type=email]{
   display: inline-block;
-  width: 28%;
+  width: 30%;
   padding: 10px;
+  margin: 15px 0;
 }
 .building-form textarea{
   display: block;
   resize: none;
   padding: 10px;
-  width: 93.5%;
+  width: 97%;
 }
 .building-form input[type=text]::placeholder, .building-form input[type=email]::placeholder,.building-form textarea::placeholder{
   color: #000;
@@ -172,3 +208,110 @@
   background-color: #ff0044;
 }
 /****************************** END - CODE FOR "I NEED A BUILDING" FORM ******************************/
+
+
+
+
+/******************************** RESPONSIVE CSS/MEDIA QUERIES **************************************/
+
+
+/* extra large devices are anything with a width higher than 1200px and is covered by the default css above */
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+  .navbar{
+    width: 70%;
+  }
+  .title-row{
+    width: 70%
+  }
+  .building-form input[type=text], .building-form input[type=email]{
+    width: 29.5%;
+  }
+
+} /******************* end of max-width: 1200 *********************/
+
+
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  .need-building{
+    width: 230px;
+  }
+  .looking-to-hire{
+    width: 230px;
+  }
+  .nav-default li a{
+    padding: 90px 20px 10px;
+  }
+  .building-form input[type=text], .building-form input[type=email]{
+    width: 28.5%;
+  }
+} /******************* end of max-width: 992 *******************/
+
+
+
+/* Small Devices, Tablets - this is normally a max-width of 768, I changed it slightly */
+@media only screen and (max-width : 768px) {
+  .navbar{
+    width: 80%;
+  }
+  .title-row{
+    width: 80%;
+    padding: 80px 0 140px;
+    text-align: center;
+  }
+  .title{
+    font-size: 50px;
+  }
+  .title-description{
+    font-size: 16px;
+  }
+  .title-links{
+    display: block;
+    margin: 10px auto;
+  }
+  .need-building{
+    width: 260px;
+  }
+  .building-form input[type=text], .building-form input[type=email], .building-form textarea{
+    display: block;
+    width: 100%
+  }
+  .building-form input[type=submit]{
+    margin-right: 0;
+  }
+  .hamburger{
+    display: inline-block;
+  }
+  .hamburger-list li{
+    width: 28%;
+  }
+  .nav-default{
+    display: none;
+  }
+
+} /******************* end of max-width: 768 *******************/
+
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  .title-row{
+    padding: 80px 0 140px;
+  }
+  .title{
+    font-size: 45px;
+  }
+  .hamburger-list li{
+    width: 25%;
+  }
+} /******************* end of max-width: 480 *******************/
+
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+} /******************* end of max-width: 320 *******************/

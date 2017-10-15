@@ -21,7 +21,6 @@
 .contact-right-half{
   width: 60%;
   display: inline-block;
-  text-align: center;
 }
 .profile{
   border-radius: 50%;
@@ -47,14 +46,15 @@
   display: inline-block;
 }
 
+.contact-form{
+  width: 100%;
+}
 .text-fields{
   width: 100%;
 }
-.contact-form{
-}
 .contact-form input[type=email], .contact-form input[type=text]{
   display: inline-block;
-  width: 23%;
+  width: 21%;
 }
 .contact-form textarea{
   width: 87%;
@@ -96,3 +96,72 @@
 .copyright a {
   color: blue;
 }
+
+
+
+
+
+
+/******************************** RESPONSIVE CSS/MEDIA QUERIES **************************************/
+
+
+
+
+/* extra large devices are anything with a width higher than 1200px and is covered by the default css above */
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+ .contact-container{
+   width: 72%;
+ }
+} /******************* end of max-width: 1200 *********************/
+
+
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  .contact-form input[type=text], .contact-form input[type=email], .contact-form textarea{
+    width: 100%;
+  }
+  .profile{
+    height: 180px;
+    width: 180px;
+  }
+} /******************* end of max-width: 992 *******************/
+
+
+
+/* Small Devices, Tablets - this is normally a max-width of 768, I changed it slightly*/
+@media only screen and (max-width : 768px) {
+  .contact-container{
+    width: 80%;
+  }
+  .contact-left-half{
+    display: block;
+    width: 100%;
+  }
+  .contact-right-half{
+    display: block;
+    width: 100%;
+    padding-top: 30px;
+    padding-left: 0px;
+  }
+  .contact-form input[type=text], .contact-form input[type=email], .contact-form textarea{
+    width: 90%;
+  }
+} /******************* end of max-width: 768 *******************/
+
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+} /******************* end of max-width: 480 *******************/
+
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+} /******************* end of max-width: 320 *******************/
