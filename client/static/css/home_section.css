@@ -10,7 +10,7 @@
   min-width: 100%;
   min-height: 100%;
   z-index: -100;
-  background-image: url('../images/top_background.jpg');
+  background-image: url('../images/top_background-min.jpg');
   background-size: cover;
   -webkit-filter: blur(1px);
   -moz-filter: blur(1px);
@@ -98,7 +98,21 @@
   color: white;
   text-decoration: none;
 }
-
+.hamburger-list-end-page {
+  display: none;
+  list-style: none;
+  width: 100%;
+  background-color: grey;
+}
+.hamburger-list-end-page li{
+  text-align: center;
+  padding: 10px 10px;
+  width: 100%
+}
+.hamburger-list-end-page li a{
+  color: white;
+  text-decoration: none;
+}
 
 
 .title-row{
@@ -108,8 +122,12 @@
   padding: 115px 0 200px;
   color: white;
 }
+.check-div{
+  width: 100%;
+}
 .title-row img{
-  padding-left: 25%;
+  display: block;
+  margin: 0 auto;
 }
 .title{
   color: #fff;
@@ -246,13 +264,17 @@
     padding: 90px 20px 10px;
   }
   .building-form input[type=text], .building-form input[type=email]{
-    width: 28.5%;
+    width: 28.9%;
+  }
+  .title-row img{
+    height: 400px;
+    width: 400px;
   }
 } /******************* end of max-width: 992 *******************/
 
 
 
-/* Small Devices, Tablets - this is normally a max-width of 768, I changed it slightly */
+/* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
   .navbar{
     width: 80%;
@@ -261,6 +283,11 @@
     width: 80%;
     padding: 80px 0 140px;
     text-align: center;
+  }
+  .title-row img{
+    height: 300px;
+    width: 300px;
+    padding-left: 25%;
   }
   .title{
     font-size: 50px;
@@ -306,6 +333,9 @@
   }
   .hamburger-list li{
     width: 25%;
+  }
+  .title-row img{
+    padding-left: 20%;
   }
 } /******************* end of max-width: 480 *******************/
 

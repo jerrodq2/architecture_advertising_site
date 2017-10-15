@@ -16,6 +16,8 @@
     <!-- JQUERY SCRIPTS BELOW -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="static/js/jquery_scripts.min.js"></script>
+    <script type="text/javascript" src="static/js/navbar_jquery.min.js"></script>
+
   </head>
 
 
@@ -26,7 +28,7 @@
       <div class="background"></div>
       <div class="header-container default">
         <div class="navbar">
-          <img class="logo" src="static/images/logo.png" alt="Logo_here">
+          <img class="logo" src="static/images/logo-min.png" alt="Logo_here">
           <nav class="nav-default">
             <ul>
               <li><a href="#top" class="active home_nav">Home</a></li>
@@ -35,7 +37,7 @@
             </ul>
           </nav>
           <div class="hamburger">
-            <button type="button" name="button"><img class="hamburger-icon" src="static/images/hamburger.png" alt="Hamburger Icon"></button>
+            <button type="button" name="button"><img class="hamburger-icon" src="static/images/hamburger-min.png" alt="Hamburger Icon"></button>
           </div>
         </div>
         <div class="hamburger-list">
@@ -82,7 +84,7 @@
         <ul class="project_list" id="projects">
 
           <li>
-            <img class="tall_image" src="static/images/project_1_with_screen.jpg" alt="">
+            <img class="tall_image" src="static/images/project_1_with_screen-min.jpg" alt="">
             <div class="project_description">
               <h1><b>Commerce Towers</b></h1>
               <p class="description">Sydney's premier center of commerce</p>
@@ -92,7 +94,7 @@
 
 
           <li>
-            <img class="tall_image" src="static/images/project_3_with_screen.jpg" alt="">
+            <img class="tall_image" src="static/images/project_3_with_screen-min.jpg" alt="">
             <div class="project_description">
               <h1><b>The Downtown Plaza</b></h1>
               <p class="description">A major hub of commerce and business in downtown New York City</p>
@@ -102,7 +104,7 @@
 
 
           <li>
-            <img class="tall_image" src="static/images/project_4_with_screen.jpg" alt="">
+            <img class="tall_image" src="static/images/project_4_with_screen-min.jpg" alt="">
             <div class="project_description">
               <h1><b>Energy Plaza</b></h1>
               <p class="description">Headquarters for a major energy company in Washington DC</p>
@@ -112,7 +114,7 @@
 
 
           <li>
-            <img class="wide_image" src="static/images/project_2_with_screen.jpg" alt="">
+            <img class="wide_image" src="static/images/project_2_with_screen-min.jpg" alt="">
             <div class="project_description_wide">
               <h1><b>Speyer Museum</b></h1>
               <p class="wide-image-description">A museum in Berlin filled with centuries worth of relics from around the world.</p>
@@ -122,7 +124,7 @@
 
 
           <li>
-            <img class="wide_image" src="static/images/project_5_with_screen.jpg" alt="">
+            <img class="wide_image" src="static/images/project_5_with_screen-min.jpg" alt="">
             <div class="project_description_wide">
               <h1><b>Axe Cafe</b></h1>
               <p class="wide-image-description">A major cafe in Paris, a popular place for both business and pleasure.</p>
@@ -132,7 +134,7 @@
 
 
           <li>
-            <img class="wide_image" src="static/images/project_6_with_screen.jpg" alt="">
+            <img class="wide_image" src="static/images/project_6_with_screen-min.jpg" alt="">
             <div class="project_description_wide">
               <h1><b>Magnolia Building</b></h1>
               <p class="wide-image-description">Detroit's Premier sci-fi and gaming convention.</p>

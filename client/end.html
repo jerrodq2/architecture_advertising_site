@@ -8,6 +8,10 @@
 
 
     <link rel="stylesheet" href="static/css/home_section.css">
+
+    <!-- JQUERY SCRIPTS BELOW -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/jquery_scripts.min.js"></script>
   </head>
 
   <body>
@@ -16,12 +20,22 @@
     <header>
       <div class="background"></div>
       <div class="header-container">
-        <img class="logo" src="static/images/logo.png" alt="Logo_here">
-        <nav class="nav-default">
-          <ul>
+        <div class="navbar">
+          <img class="logo" src="static/images/logo-min.png" alt="Logo_here">
+          <nav class="nav-default">
+            <ul>
+              <li><a href="/" class="active">Home Page</a></li>
+            </ul>
+          </nav>
+          <div class="hamburger">
+            <button type="button" name="button"><img class="hamburger-icon" src="static/images/hamburger-min.png" alt="Hamburger Icon"></button>
+          </div>
+        </div>
+        <div class="hamburger-list-end-page">
+          <ul class="">
             <li><a href="/" class="active">Home Page</a></li>
           </ul>
-        </nav>
+        </div>
       </div>
     </header>
     <!-- END OF NAVBAR -->
@@ -30,7 +44,10 @@
       <div class="title-row">
         <h1 class="title">Thank You! </h1>
         <h3 class="title-description">Your message has been sent, we will be in contact with you soon. In the meantime, click <a href="/">here</a> to go back to the home page.</h3>
-        <img src="static/images/check.png" alt="check mark">
+        <div class="check-div">
+          <img src="static/images/check-min.png" alt="check mark">
+        </div>
+
       </div>
     </main>
 
