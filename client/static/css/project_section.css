@@ -25,7 +25,6 @@
   cursor: default;
   color: #e02239;
 }
-
 .tall_image{
   width: 50%;
 }
@@ -38,10 +37,10 @@
   display: inline-block;
   text-align: center;
   vertical-align: top;
-  padding-top: 25%;
+  padding-top: 24%;
 }
 .project_description_wide{
-  width: 45%;
+  width: 43%;
   display: inline-block;
   text-align: center;
   vertical-align: top;
@@ -60,3 +59,83 @@
   background-color: #e62c61;
   border-radius: 4px;
 }
+
+
+
+
+
+
+/******************************** RESPONSIVE CSS/MEDIA QUERIES **************************************/
+
+
+/* extra large devices are anything with a width higher than 1200px and is covered by the default css above */
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+  .project_list{
+    width: 70%
+  }
+  .project_description_wide{
+    padding: 10% 10px 0;
+  }
+} /******************* end of max-width: 1200 *********************/
+
+
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  .project_description_wide{
+    width: 41%;
+  }
+  .project_description_wide{
+    padding: 5% 10px 0;
+  }
+  .contact-right-half{
+    padding-left: 10px;
+  }
+} /******************* end of max-width: 992 *******************/
+
+
+
+/* Small Devices, Tablets - this is normally a max-width of 768, I changed it slightly*/
+@media only screen and (max-width : 768px) {
+  .project_list{
+    width: 80%
+  }
+  .project_list li{
+    padding: 100px 0;
+  }
+  .tall_image{
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+  }
+  .wide_image{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .project_description{
+    width: 100%;
+    padding-top: 10px;
+  }
+  .project_description_wide{
+    padding: 0;
+    width: 100%;
+  }
+} /******************* end of max-width: 768 *******************/
+
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+} /******************* end of max-width: 480 *******************/
+
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+} /******************* end of max-width: 320 *******************/
