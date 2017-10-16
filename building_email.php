@@ -66,7 +66,7 @@ $email_body = "
 
   </body>
 </html>
-"
+";
 
 // ********************************************************************************************
 // **************************** END OF CODE FOR EMAIL BODY *******************************
@@ -91,7 +91,7 @@ if (!$mail){
   echo "Message not sent, there was an error. Please contact Jerrod at jerrodq2@yahoo.com";
   $errorMessage = error_get_last()['message'];
   echo "There was an error: $errorMessage";
-  header('Location: error.html')
+  header('Location: error.html');
 } else {
   echo "Message sent";
   header('Location: end.html');
