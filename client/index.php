@@ -68,7 +68,7 @@
             <input type="text" name="phone" placeholder="Phone">
           </div>
           <textarea name="message" rows="8" placeholder="General Idea of Building or Message to Architecture Firm" required></textarea>
-          <input type="submit" name="" value="Submit">
+          <input type="submit" name="submit" value="Submit">
         </form>
       </div>
       <!-- END of the HOME section or the top of the page -->
