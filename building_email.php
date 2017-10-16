@@ -73,6 +73,8 @@ if(mail($to, $subject, $email_body, $headers)){
   header('Location: end.html');
 } else {
   echo "Message not sent, there was an error. Please contact Jerrod at jerrodq2@yahoo.com";
+  $e = error_get_last();
+  echo "Error: $e";
 }
 //redirect to the thank you page (or the equivalent)
 
