@@ -36,30 +36,49 @@ if(IsInjected($visitor_email))
     exit;
 }
 
-// ************************************************************************************************
-// **************************** CODE FOR EMAIL BODY BELOW *****************************************
-// ************************************************************************************************
+// *********************************************************************************************
+// *********************CODE FOR EMAIL BODY BELOW ***************************
 
-$email_body = '<html><body>';
-$email_body .= "<h2> You've recieved a new message from: $visitor_name </h2>";
-$email_body .= '<h4> Here is the message: </h4>';
-$email_body .= "<p> $visitor_message </p>";
-$email_body .= "<h4> Their contact info is below</h4>";
-$email_body .= "<ul> <li> email: $visitor_email </li>";
-$email_body .= "<li> phone: $visitor_phone </li></ul>";
-$email_body .= '</body></html>';
+$email_body = "
+<html lang='en'>
+  <head>
+    <title> Email from Architecture Advertising Website - Building Form</title>
+    <meta charset='utf-8'>
+    <meta name='description' content='You have been contacted from your Architecture Advertising Website'>
+  </head>
 
 
+  <body>
+    <header>
+      <h2> You've recieved a new message from: $visitor_name, they're trying to contact you! </h2>
+    </header>
 
-// ************************************************************************************************
-// **************************** END OF CODE FOR EMAIL BODY ****************************************
-// ************************************************************************************************
+    <main>
+      <h4> Here is the message: </h4>
+      <p> $visitor_message </p>
+      <br>
+      <h4> Their contact info is below: </h4>
+      <ul>
+        <li> email: $visitor_email </li>
+        <li> phone: $visitor_phone </li>
+      </ul>
+    </main>
+
+  </body>
+</html>
+"
+
+// ********************************************************************************************
+// **************************** END OF CODE FOR EMAIL BODY *******************************
+
+
 
 
 // code to send emails is as follows: email(to, subject, message, headers)
 $to = 'jerrodq2@yahoo.com';
-$subject = "Contact Form Submission: $visitor_name Is Trying To Contact You\r\n";
-$headers = "From: contact-form@ArchitectureAdvertisingWebsite.com \r\n";
+$subject = "Contact Form Submission: $visitor_name Is Trying To Contact You \r\n";
+$headers = "From: Architecture Advertising Website <architecturesite@advertising.com> \r\n";
+$headers .= 'MIME-Version: 1.0' . "\r\n";
 //The below line is necessary if you're sending your email in html format, without it, the email will be read literally, meaning "<h1>H1</h1>" would be shown exactly like that instead of as heder 1 text
 $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
@@ -74,6 +93,7 @@ if (!$mail){
   echo "Message not sent, there was an error. Please contact Jerrod at jerrodq2@yahoo.com";
   $errorMessage = error_get_last()['message'];
   echo "There was an error: $errorMessage";
+  header('Location: error.html')
 } else {
   echo "Message sent";
   header('Location: end.html');

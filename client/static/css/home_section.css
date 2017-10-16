@@ -127,6 +127,8 @@
 }
 .title-row img{
   display: block;
+  height: 500px;
+  width: 500px;
   margin: 0 auto;
 }
 .title{
@@ -287,6 +289,8 @@
   .title-row img{
     height: 300px;
     width: 300px;
+  }
+  .check{
     padding-left: 25%;
   }
   .title{
@@ -334,7 +338,7 @@
   .hamburger-list li{
     width: 25%;
   }
-  .title-row img{
+  .check{
     padding-left: 20%;
   }
 } /******************* end of max-width: 480 *******************/
