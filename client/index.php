@@ -64,7 +64,7 @@
         <form class="building-form" action="process_building_form.php" method="post">
           <div class="building-form-inputs">
             <input type="text" name="name" placeholder="Name" required>
-            <input type="email" name="email" placeholder="Email">
+            <input type="email" name="email" placeholder="Email" required>
             <input type="text" name="phone" placeholder="Phone">
           </div>
           <textarea name="message" rows="8" placeholder="General Idea of Building or Message to Architecture Firm" required></textarea>
@@ -182,7 +182,7 @@
             <form class="contact-form" action="process_contact_form.php" method="post">
               <div class="text-fields">
                 <input type="text" name="name" value="" placeholder="Name" required id="name">
-                <input type="email" name="email" value="" placeholder="Email">
+                <input type="email" name="email" value="" placeholder="Email" required>
                 <input type="text" name="phone" value="" placeholder="Phone">
               </div>
               <textarea name="message" placeholder="Message" rows="6" required></textarea>

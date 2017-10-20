@@ -7,13 +7,8 @@ if(!isset($_POST['submit'])){
 
 $visitor_name = $_POST['name'];
 $visitor_message = $_POST['message'];
+$visitor_email = $_POST['email'];
 
-//incase the email isn't provided
-if(empty($_POST['email'])){
-  $visitor_email = 'n/a';
-} else {
-  $visitor_email = $_POST['email'];
-}
 
 //incase the phone isn't provided
 if(empty($_POST['phone'])){
@@ -23,9 +18,9 @@ if(empty($_POST['phone'])){
 }
 
 
-if(empty($visitor_name) || empty($visitor_message))
+if(empty($visitor_name) || empty($visitor_message) || empty($visitor_email) )
 {
-  echo "Name and message are mandatory!";
+  echo "Name, message, and email are mandatory!";
   exit;
 }
 
@@ -79,15 +74,14 @@ $to = 'jerrodq2@yahoo.com';
 $subject = "Contact Form Submission: $visitor_name Is Trying To Contact You \r\n";
 
 $headers = "From: Architecture Advertising Website <noreply@example.com>\r\n";
-$headers .= "Return-Path: noreply@example.com\r\n";
+$headers .= "Reply-To: $visitor_name <$visitor_email>\r\n";
+$headers .= "Return-Path: $visitor_email\r\n";
+$headers .= "Organization: Architecture Advertising Website\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-$headers .= "X-Mailer: PHP". phpversion() ."\n";
+$headers .= "X-Priority: 3\r\n";
+$headers .= "X-Mailer: PHP". phpversion() ."\r\n";
 
-//only provide a Reply-To if they gave us an email
-if($visitor_email != 'n/a'){
-  $headers .= "Reply-To: $visitor_email \r\n";
-}
 
 //send the email
 $mail = mail($to, $subject, $email_body, $headers);
