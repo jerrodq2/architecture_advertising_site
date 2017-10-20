@@ -74,11 +74,13 @@ $email_body = "
 
 // code to send emails is as follows: email(to, subject, message, headers)
 $to = 'jerrodq2@yahoo.com';
-$subject = "Building Form Submission: $visitor_name Needs a building\r\n";
-$headers = "From: Architecture Advertising Website <architecturesite@advertising.com> \r\n";
-$headers .= 'MIME-Version: 1.0' . "\r\n";
-//The below line is necessary if you're sending your email in html format, without it, the email will be read literally, meaning "<h1>H1</h1>" would be shown exactly like that instead of as heder 1 text
+$subject = "Contact Form Submission: $visitor_name Is Trying To Contact You \r\n";
+
+$headers = "From: Architecture Advertising Website <noreply@example.com>\r\n";
+$headers .= "Return-Path: noreply@example.com\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+$headers .= "X-Mailer: PHP". phpversion() ."\n";
 
 //only provide a Reply-To if they gave us an email
 if($visitor_email != 'n/a'){
